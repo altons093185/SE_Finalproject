@@ -1,10 +1,41 @@
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.module_pages{
+  display: flex;
+  align-items: center;
+}
+
+.module_pages button{
+  display: flex;
+  /* border: 8px; */
+  margin: 3px;
+}
+
+h1{
+  text-align: center;
+}
+
 .addition{
-  margin: 8px;
+  display: flex;
+  position: relative;
+  margin-left: auto; /* 有問題 */
+  margin-bottom: 10px;
+  /* float: right; */
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
 }
 
 table{
   border:1px solid #888888;
   border-collapse: collapse;
+  margin: auto;
 }
 
 thead{
@@ -23,4 +54,18 @@ th{
 
 tr:nth-child(even){
   background-color: #f0f0f0;
+}
+
+.pages{
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.pages a{
+  margin: 4px;
+}
+
+.pages a:hover{
+  color: blueviolet;
 }
