@@ -2,6 +2,7 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px solid black;
 }
 
 .module_pages{
@@ -22,7 +23,8 @@ h1{
 .addition{
   display: flex;
   position: relative;
-  margin-left: auto; /* 有問題 */
+  margin:auto;
+  /* margin-left: auto; 有問題 */
   margin-bottom: 10px;
   /* float: right; */
 }
