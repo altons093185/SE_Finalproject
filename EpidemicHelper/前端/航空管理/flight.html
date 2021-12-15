@@ -2,10 +2,19 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="flight_style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
     <title>航班管理系統</title>
+
   </head>
   
   <body>
+  <?php
+    $list = [1, 2, 3, 4];
+    foreach($list as $item) {
+      echo $item;
+      echo "<br>";
+    }
+  ?>
     <header class="head">
       <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
       <div class="module_pages">
@@ -74,6 +83,16 @@
             </td>
           </tr>
         </tbody>
+
+        <!-- <tfoot>
+          <tr>
+            <td>
+              <rowgroup rowspan>
+                更新日期:
+              </rowgroup>
+            </td>
+          </tr>
+        </tfoot> -->
       </table>    
     </div>
 
