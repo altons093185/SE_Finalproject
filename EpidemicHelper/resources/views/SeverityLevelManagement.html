@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="flight_style.css">
+    <meta charset="ustf-8">
+    <link rel="stylesheet" type="text/css" href="../css/flight_style.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
-    <title>航班管理系統</title>
-
+    <title>防疫等級管理系統</title>
   </head>
   
   <body>
-  <?php
-    $list = [1, 2, 3, 4];
-    foreach($list as $item) {
-      echo $item;
-      echo "<br>";
-    }
-  ?>
+
     <header class="head">
       <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
       <div class="module_pages">
@@ -24,33 +18,28 @@
         <button class="login_logout">登出</button> <!-- 1.登出後 2.跳回首頁 -->
       </div>
     </header>
-    
-    <h1>航班管理系統</h1>
+       
+    <h1>防疫等級管理系統</h1>
     <div class="main">
       <button class="addition">新增</button>
       <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">航空公司代碼</th>
-            <th scope="col">班次編號</th>
-            <th scope="col">表訂時間日期</th>
-            <th scope="col">城市縮寫</th>
-            <th scope="col">城市中文</th>
-            <th scope="col">狀態</th>
+            <th scope="col">severity_level</th>
+            <th scope="col">alert_disease</th>
+            <th scope="col">areaDesc</th>
+            <th scope="col">effective（發佈日期）</th>
             <th scope="col">管理</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>CI</td>
-            <td>0501</td>
-            <td>12/10</td>
-            <td>TPE</td>
-            <td>台北(桃園) -> 上海(浦東)</td>
-            <td>on time</td>
+            <td>第一級:注意(Watch)</td>
+            <td>中東呼吸症候群冠狀病毒感染症</td>
+            <td>阿拉伯聯合大公國</td>
+            <td>2015-09-30</td>
             <td>
               <button class="update">修改</button>
               <button class="delete">刪除</button>
@@ -58,12 +47,10 @@
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>CI</td>
-            <td>0503</td>
-            <td>12/10</td>
-            <td>TPE</td>
-            <td>台北(桃園) -> 上海(浦東)</td>
-            <td>arrived</td>
+            <td>第一級:注意(Watch)</td>
+            <td>新型A型流感</td>
+            <td>印度</td>
+            <td>2021-08-13</td>
             <td>
               <button class="update">修改</button>
               <button class="delete">刪除</button>
@@ -71,12 +58,10 @@
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>CI</td>
-            <td>0505</td>
-            <td>12/10</td>
-            <td>TPE</td>
-            <td>台北(桃園) -> 上海(浦東)</td>
-            <td>arrived</td>
+            <td>第二級:警示(Alert)</td>
+            <td>茲卡病毒感染症</td>
+            <td>印度</td>
+            <td>2021-07-13</td>
             <td>
               <button class="update">修改</button>
               <button class="delete">刪除</button>
@@ -97,9 +82,11 @@
     </div>
 
     <div class="pages">
+      <a href="" class="previous-page">上一頁</a>
       <a href="">1</a>
       <a href="">2</a>
       <a href="">3</a>
+      <a href="" class="next-page">下一頁</a>
     </div>
 
   </body>

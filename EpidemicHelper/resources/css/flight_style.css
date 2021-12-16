@@ -1,19 +1,51 @@
 header{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3px;
   border-bottom: 1px solid black;
+  text-align: center;
 }
 
 .module_pages{
-  display: flex;
-  align-items: center;
+  display: block;
+  margin: 0 auto;
+  /* justify-content: center; */
 }
 
 .module_pages button{
-  display: flex;
+  display: inline-block;
   /* border: 8px; */
   margin: 3px;
+}
+
+.login_logout{
+
+}
+
+button{
+  padding: 3px 6px;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  background-color: white;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+button.delete:hover{
+  background-color: red;
+  color: white;
+}
+
+.update,
+.delete{
+  margin: 2px 6px;
 }
 
 h1{
@@ -33,26 +65,40 @@ h1{
   display: flex;
   flex-direction: column;
 }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 table{
-  border:1px solid #888888;
   border-collapse: collapse;
   margin: auto;
 }
 
 thead{
-  background-color: #989898;
-}
-
-td,
-th {
-  border:1px solid black; 
-  padding:10px;
+  background-color: #04AA6D;
+  color: white;
 }
 
 th{
   text-align: left;
 }
+
+td,
+th {
+  border-bottom:1px solid #888888;  /* 只有列分隔線 */
+  /* border:1px solid black;  */ 
+  padding:10px;
+}
+
+tbody tr:hover{
+  background-color: #ddd;
+}
+
+/* 第一行黑底白字 */
+/* th:nth-child(1){ 
+  background-color: black;
+  color: white;
+} */
 
 tr:nth-child(even){
   background-color: #f0f0f0;
