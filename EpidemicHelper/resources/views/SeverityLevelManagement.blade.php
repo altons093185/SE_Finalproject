@@ -6,7 +6,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
     <title>防疫等級管理系統</title>
   </head>
-  
+
   <body>
 
     <header class="head">
@@ -30,10 +30,10 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">severity_level</th>
-            <th scope="col">alert_disease</th>
-            <th scope="col">areaDesc</th>
-            <th scope="col">effective（發佈日期）</th>
+            <th scope="col">防疫等級</th>
+            <th scope="col">疾病名稱</th>
+            <th scope="col">國家/區域</th>
+            <th scope="col">發佈日期</th>
             <th scope="col">管理</th>
           </tr>
         </thead>
