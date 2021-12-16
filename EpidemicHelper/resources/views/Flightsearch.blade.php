@@ -50,12 +50,17 @@
 
     <div class="queryform">
     <form action="signup" method="post">
-        出發地: <select name="Departure">
+       <input type="text" placeholder="出發地">
+       <input type="text" placeholder="目的地">
+       <input type="text" placeholder="去程日期/回程日期">
+       <!-- 出發地: <select name="Departure">
           <option value="A">台灣</option>
           <option value="B">日本</option>
           <option value="C">美國</option>
           <option value="D">中國</option>
         </select> <nobr/>
+       
+       
         目的地: <select name="destination">
           <option value="A">台灣</option>
           <option value="B">日本</option>
@@ -63,7 +68,7 @@
           <option value="D">中國</option>
         </select> <nobr/>
         去程回程日期: <input type="date" name="date"/><nobr/>
-        
+        -->
         <input type="submit" value="搜尋"/><br/>
         <br />
         <br />
