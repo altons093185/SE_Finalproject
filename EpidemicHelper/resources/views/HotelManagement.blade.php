@@ -4,22 +4,22 @@
     <meta charset="ustf-8">
     <link rel="stylesheet" type="text/css" href="../css/general.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
-    <title>防疫等級管理系統</title>
+    <title>旅館管理系統</title>
   </head>
   
   <body>
 
     <header class="head">
       <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
-      <div class="module_pages">
+      <div class="module-pages">
         <button class="flight">航班</button>
-        <button class="serverity_level">防疫等級</button>
+        <button class="serverity-level">防疫等級</button>
         <button class="hotel">旅館</button>
-        <button class="login_logout">登出</button> <!-- 1.登出後 2.跳回首頁 -->
+        <button class="login-logout">登出</button> <!-- 1.登出後 2.跳回首頁 -->
       </div>
     </header>
        
-    <h1>防疫等級管理系統</h1>
+    <h1>旅館管理系統</h1>
     <div class="main">
       <button class="addition">新增</button>
       <table class="table">

@@ -14,6 +14,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../css/general.css">
         <link rel="stylesheet" type="text/css" href="../css/hotel.css">
+        <link rel="stylesheet" type="text/css" href="../css/popup.css">
         <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
         <title>防疫小幫手</title>
 
@@ -39,53 +40,40 @@
         <h3 class=section_title>最新 防疫等級資訊</h3><a href="url">All→</a>
 
         <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">防疫等級</th>
-                    <th scope="col">疾病名稱</th>
-                    <th scope="col">國家/區域</th>
-                    <th scope="col">發佈日期</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <th scope="row">第二級:警戒(Alert)</th>
-                    <td>茲卡病毒感染症</td>
-                    <td>印度</td>
-                    <td>2021/07/13</td>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">第二級:警戒(Alert)</th>
-                    <td>茲卡病毒感染症</td>
-                    <td>印度</td>
-                    <td>2021/07/13</td>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">第二級:警戒(Alert)</th>
-                    <td>茲卡病毒感染症</td>
-                    <td>印度</td>
-                    <td>2021/07/13</td>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">第二級:警戒(Alert)</th>
-                    <td>茲卡病毒感染症</td>
-                    <td>印度</td>
-                    <td>2021/07/13</td>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">第二級:警戒(Alert)</th>
-                    <td>茲卡病毒感染症</td>
-                    <td>印度</td>
-                    <td>2021/07/13</td>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">severity_level</th>
+            <th scope="col">alert_disease</th>
+            <th scope="col">areaDesc</th>
+            <th scope="col">effective（發佈日期）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>第一級:注意(Watch)</td>
+            <td>中東呼吸症候群冠狀病毒感染症</td>
+            <td>阿拉伯聯合大公國</td>
+            <td>2015-09-30</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>第一級:注意(Watch)</td>
+            <td>新型A型流感</td>
+            <td>印度</td>
+            <td>2021-08-13</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>第二級:警示(Alert)</td>
+            <td>茲卡病毒感染症</td>
+            <td>印度</td>
+            <td>2021-07-13</td>
+          </tr>
+        </tbody>
+      </table>    
+    </div>
 
         <h3 class=section_title>最新 防疫旅館資訊</h3><a href="url">All→</a>
         <div class="hotel_row">
@@ -103,32 +91,29 @@
             </div>
 
         </div>
-           
-        <div id="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-                <h1>Login</h1>
 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit" class="btn">Login</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
+        <div class="popup-form" id="myForm">
+            <div class="form-top-row">
+                <h3 class="form-title">管理員登入</h3>
+                <input type="image" src="../icon/close.png" class="close-icon" onclick="closeForm()"/>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Email" name="email" required>
+            </div>
+            <div class="input">
+                <input type="password" placeholder="Password" name="psw" required>
+            </div>
+            <button type="submit" class="login-button">登入</button>
         </div>
 
         <script>
-            function openForm() {
-                document.getElementById("myForm").style.display = "block";
+            function openForm(){
+                document.getElementById("myForm").style.cssText = "display: block;";
             }
-
-            function closeForm() {
-                document.getElementById("myForm").style.display = "none";
+            function closeForm(){
+                document.getElementById("myForm").style.cssText = "display: none;";
             }
         </script>
-
     </body>
 </html>
 

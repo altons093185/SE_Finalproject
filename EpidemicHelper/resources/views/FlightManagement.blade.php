@@ -8,7 +8,6 @@
   </head>
   
   <body>
- 
     <header class="head">
       <div class="logo">
         <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
@@ -216,9 +215,9 @@
 
     <div class="pages">
       <a href="" class="previous-page">上一頁</a>
-      <a href="">1</a>
-      <a href="">2</a>
-      <a href="">3</a>
+      <a href="page1">1</a>
+      <a href="page2">2</a>
+      <a href="page3">3</a>
       <a href="" class="next-page">下一頁</a>
     </div>
 
