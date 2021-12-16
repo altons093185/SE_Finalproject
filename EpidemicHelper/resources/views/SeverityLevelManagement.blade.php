@@ -10,11 +10,15 @@
   <body>
 
     <header class="head">
-      <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
+      <div class="logo">
+        <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
+      </div>
       <div class="module_pages">
         <button class="flight">航班</button>
         <button class="serverity_level">防疫等級</button>
         <button class="hotel">旅館</button>
+      </div>
+      <div class="login_logout">
         <button class="login_logout">登出</button> <!-- 1.登出後 2.跳回首頁 -->
       </div>
     </header>

@@ -13,20 +13,42 @@
         <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
       </div>
       <div class="module_pages">
-        <select name="flight">航班
-          <option value="A">航班資訊</option>
-        </select>
-        <select class="serverity_level">防疫等級</select>
-        <select class="hotel">旅館</select>
+      
+        <div class="dropdown">
+          <button class="dropbtn">航班</button>
+          <div class="dropdown-content">
+            <a href="C:\xampp\htdocs\SE_Finalproject\EpidemicHelper\resources\views\Flightadd.html">航班資訊</a>
+          </div>
+        </div>
+
+
+
+        <div class="dropdown">
+          <button class="dropbtn">防疫等級</button>
+          <div class="dropdown-content">
+            <a href="#">防疫等級清單</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">旅館</button>
+          <div class="dropdown-content">
+            <a href="#">北部旅館</a>
+            <a href="#">中部旅館</a>
+            <a href="#">南部旅館</a>
+          </div>
+        </div>
+        
       </div>
       <div class="login_logout">
         <button>登出</button> <!-- 1.登出後 2.跳回首頁 -->
       </div>
+
     </header>
 
     <h1>航班搜尋</h1>
 
-    <div class="form">
+    <div class="queryform">
     <form action="signup" method="post">
         出發地: <select name="Departure">
           <option value="A">台灣</option>

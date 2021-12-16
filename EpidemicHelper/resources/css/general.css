@@ -8,9 +8,11 @@ header{
 }
 
 .module_pages{
-  display: block;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
-  /* justify-content: center; */
+
+
 }
 
 .module_pages button{
@@ -51,7 +53,9 @@ button.delete:hover{
 h1{
   text-align: center;
 }
-
+h4{
+  text-align: center;
+}
 .addition{
   display: flex;
   position: relative;
@@ -114,7 +118,7 @@ tr:nth-child(even){
   margin: 4px;
 }
 
-.form{
+.queryform{
   display: flex;
   justify-content: center;
 }
