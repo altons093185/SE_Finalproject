@@ -114,6 +114,25 @@ tr:nth-child(even){
   margin: 4px;
 }
 
+.search{
+  display: flex;
+  justify-content: center;
+}
+
+.section_title{
+
+}
+
+
+
+.page_title{
+
+}
+
+.page_description{
+
+}
+
 /* .pages a:hover{
   color: blueviolet;
 } */
