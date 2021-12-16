@@ -30,7 +30,7 @@
                     <h4 class="hotel_name">AAA旅館</h4>
                 </div>
                 <div class="hotel">
-                <a href="https://asiayo.com/zh-tw/view/tw/taipei-city/39640/?appdownload=on&aff_id=291&people=1">
+                    <a href="https://asiayo.com/zh-tw/view/tw/taipei-city/39640/?appdownload=on&aff_id=291&people=1">
                         <img src="../img/hotel_1.png" alt="Hotel_1" class="hotel_image">
                     </a>
                     <h4 class="hotel_name">BBB旅館</h4>
