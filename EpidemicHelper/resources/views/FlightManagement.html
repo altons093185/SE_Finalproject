@@ -8,15 +8,34 @@
   </head>
   
   <body>
-
+ 
     <header class="head">
       <div class="logo">
         <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
       </div>
-      <div class="module_pages">
-        <button class="flight">航班</button>
-        <button class="serverity_level">防疫等級</button>
-        <button class="hotel">旅館</button>
+      <div class="dropdown">
+        <button class="dropbtn">航班</button>
+        <div class="dropdown-content">
+          <a href="C:\xampp\htdocs\SE_Finalproject\EpidemicHelper\resources\views\Flightsearch.html">航班資訊</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">防疫等級</button>
+        <div class="dropdown-content">
+          <a href="#">防疫等級清單</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">旅館資訊</button>
+        <div class="dropdown-content">
+          <a href="#">台北/新北/基隆 旅館</a>
+          <a href="#">桃園/新竹/台中 旅館</a>
+          <a href="#">台南/高雄 旅館</a>
+        </div>
+      </div>
+
       </div>
       <div class="login_logout">
         <button>登出</button> <!-- 1.登出後 2.跳回首頁 -->
