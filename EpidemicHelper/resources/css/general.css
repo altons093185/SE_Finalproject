@@ -7,23 +7,17 @@ header{
   /* background-color: black; */
   text-align: center;
 }
-.logo{
-  flex
-}
-.module_pages{
+
+.module-pages{
   display: flex;
   margin-left: auto;
   /* justify-content: right; */
 }
   
-.module_pages button{
+.module-pages button{
   display: inline-block;
   /* border: 8px; */
   margin: 0px 3px;
-}
-
-.login_logout{
-
 }
 
 button{
