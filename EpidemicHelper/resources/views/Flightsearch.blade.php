@@ -52,7 +52,7 @@
     <form action="signup" method="post">
        <input type="text" placeholder="出發地">
        <input type="text" placeholder="目的地">
-       <input type="text" placeholder="去程日期/回程日期">
+       <input type="datetime-local" placeholder="去程日期/回程日期">
        <!-- 出發地: <select name="Departure">
           <option value="A">台灣</option>
           <option value="B">日本</option>
