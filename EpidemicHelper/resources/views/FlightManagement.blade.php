@@ -2,13 +2,12 @@
 <html>
   <head>
     <meta charset="ustf-8">
-    <link rel="stylesheet" type="text/css" href="../css/general.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/general.css"> 
     <title>航班管理系統</title>
   </head>
   
   <body>
- 
     <header class="head">
       <div class="logo">
         <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
@@ -18,16 +17,10 @@
         <div class="dropdown-content">
           <a href="C:\xampp\htdocs\SE_Finalproject\EpidemicHelper\resources\views\Flightsearch.html">航班資訊</a>
         </div>
-      </div>
-
-      <div class="dropdown">
         <button class="dropbtn">防疫等級</button>
         <div class="dropdown-content">
           <a href="#">防疫等級清單</a>
         </div>
-      </div>
-      
-      <div class="dropdown">
         <button class="dropbtn">旅館資訊</button>
         <div class="dropdown-content">
           <a href="#">台北/新北/基隆 旅館</a>
@@ -214,13 +207,23 @@
       </table>    
     </div>
 
-    <div class="pages">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+    <!-- <div class="pages">
       <a href="" class="previous-page">上一頁</a>
-      <a href="">1</a>
-      <a href="">2</a>
-      <a href="">3</a>
+      <a href="page1">1</a>
+      <a href="page2">2</a>
+      <a href="page3">3</a>
       <a href="" class="next-page">下一頁</a>
-    </div>
+    </div> -->
 
+    <button class="button-29" role="button">Button 29</button>
   </body>
 </html>

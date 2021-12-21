@@ -6,20 +6,20 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
     <title>防疫等級管理系統</title>
   </head>
-  
+
   <body>
 
     <header class="head">
       <div class="logo">
         <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
       </div>
-      <div class="module_pages">
+      <div class="module-pages">
         <button class="flight">航班</button>
-        <button class="serverity_level">防疫等級</button>
+        <button class="serverity-level">防疫等級</button>
         <button class="hotel">旅館</button>
       </div>
-      <div class="login_logout">
-        <button class="login_logout">登出</button> <!-- 1.登出後 2.跳回首頁 -->
+      <div class="login-logout">
+        <button class="login-logout">登出</button> <!-- 1.登出後 2.跳回首頁 -->
       </div>
     </header>
        
@@ -30,10 +30,10 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">severity_level</th>
-            <th scope="col">alert_disease</th>
-            <th scope="col">areaDesc</th>
-            <th scope="col">effective（發佈日期）</th>
+            <th scope="col">防疫等級</th>
+            <th scope="col">疾病名稱</th>
+            <th scope="col">國家/區域</th>
+            <th scope="col">發佈日期</th>
             <th scope="col">管理</th>
           </tr>
         </thead>

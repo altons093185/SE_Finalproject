@@ -4,24 +4,21 @@
 <!-- 傳送資料到母模板，並指定變數為title -->
 
 <!-- 傳送資料到母模板，並指定變數為content -->
-<!--@section('content')
-<h1>總共有幾天：{{$days}}</h1>
-<h1>中華航空 共有哪些班次{{$airplanes}}</h1>
-@endsection-->
+
 
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../css/general.css">
-        <link rel="stylesheet" type="text/css" href="../css/hotel.css">
-        <link rel="stylesheet" type="text/css" href="../css/popup.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/general.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/hotel.css">
+        <link rel="stylesheet" type="text/css" href="../resources/css/popup.css">
         <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
         <title>防疫小幫手</title>
 
     </head>
     <body>
         <header class="head">
-        <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
+        <img src="../resources/icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
         <div class="module_pages">
             <button class="flight">航班</button>
             <button class="serverity_level">防疫等級</button>
@@ -78,15 +75,15 @@
         <h3 class=section_title>最新 防疫旅館資訊</h3><a href="url">All→</a>
         <div class="hotel_row">
             <div class="hotel">
-                <img src="../img/hotel_1.png" alt="Hotel_1" class="hotel_image">
+                <img src="../resources/img/hotel_1.png" alt="Hotel_1" class="hotel_image">
                 <h4 class="hotel_name">台北/新北/基隆旅館列表</h4>
             </div>
             <div class="hotel">
-                <img src="../img/hotel_2.png" alt="Hotel_2" class="hotel_image">
+                <img src="../resources/img/hotel_2.png" alt="Hotel_2" class="hotel_image">
                 <h4 class="hotel_name">桃園/新竹/台中旅館列表</h4>
             </div>
             <div class="hotel">
-                <img src="../img/hotel_3.png" alt="Hotel_3" class="hotel_image">
+                <img src="../resources/img/hotel_3.png" alt="Hotel_3" class="hotel_image">
                 <h4 class="hotel_name">台南/高雄旅館列表</h4>
             </div>
 
@@ -95,7 +92,7 @@
         <div class="popup-form" id="myForm">
             <div class="form-top-row">
                 <h3 class="form-title">管理員登入</h3>
-                <input type="image" src="../icon/close.png" class="close-icon" onclick="closeForm()"/>
+                <input type="image" src="../resources/icon/close.png" class="close-icon" onclick="closeForm()"/>
             </div>
             <div class="input">
                 <input type="text" placeholder="Email" name="email" required>
