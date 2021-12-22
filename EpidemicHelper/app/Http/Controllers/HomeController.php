@@ -15,6 +15,7 @@ class HomeController extends Controller
         return view('home',['days' => $day , 'airplanes' => $airplane]);
         */
 
+        
         return view('home');
     }
 }
