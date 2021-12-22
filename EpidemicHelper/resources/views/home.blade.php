@@ -18,7 +18,7 @@
     </head>
     <body>
         <header class="head">
-        <img src="../resources/icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
+        <img src="../resources  /icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
         <div class="module_pages">
             <button class="flight">航班</button>
             <button class="serverity_level">防疫等級</button>
