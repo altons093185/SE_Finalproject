@@ -10,9 +10,8 @@ class CompanyController extends Controller
     //首頁
     public function indexPage(Request $request)
     {   
-        $company_name = $request->input('company');
-        $company = Company::where('Company_name',$company_name)->get();
-        return view('company',['company' => $company]);
+        $company = new Company();
+        return view('company',['company' => $company->get_companyName($request->input('company'))]);
         
     }
 }
