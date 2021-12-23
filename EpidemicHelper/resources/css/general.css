@@ -231,26 +231,17 @@ button:active {
 button{
   background-color: teal;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 button.delete{
   background-color: red;
   color: white;
   background-image: none;
 }
-<<<<<<< Updated upstream
 
 button.update{
   background-color: #33b5e5 ;
 }
 
-=======
-button.update{
-  background-color: #33b5e5 ;
-}
->>>>>>> Stashed changes
 nav{
   display: flex;
   justify-content: center;
