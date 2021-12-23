@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-
     <link rel="icon" type="image/png" href="./img/favicon.ico" />
 
     <!--Normalise CSS-->
@@ -66,10 +65,10 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li><a href="#home" class="smooth-scroll">Home</a></li>
-                        <li><a href="#services" class="smooth-scroll">Services</a></li>
-                        <li><a href="#trending">Trending</a></li>
-                        <li><a href="#custom-packages">Custom Packages</a></li>
+                        <li><a href="#home" class="smooth-scroll">首頁</a></li>
+                        <li><a href="#services" class="smooth-scroll">航班資訊</a></li>
+                        <li><a href="#trending">旅館資訊</a></li>
+                        <li><a href="#custom-packages">防疫等級資訊</a></li>
                         <?php 
                             if(isset($_SESSION['login'])){
                          ?>
@@ -77,25 +76,21 @@
 
                         </li>
                      <?php }else{ ?>
-                        <li><a href="./vendor/login/login.php">Login</a>
+                        <li><a href="./vendor/login/login.php">登入</a>
 
                         </li>
 
-
-                        <li><a href="./vendor/register/signup.php">Sign Up</a>
+                        <!-- <li><a href="./vendor/register/signup.php">Sign Up</a>  -->
 
                         </li>
                     <?php } ?>
                         </li>
-                        <li><a href="#contact" class="smooth-scroll">Contact</a></li>
+                        <!-- <li><a href="#contact" class="smooth-scroll">Contact</a></li> -->
                     </ul>
                 </nav><!-- #nav-menu-container -->
             </div>
         </div>
     </header><!-- #header -->
-
-
-
 
 
 
@@ -108,13 +103,12 @@
             <div class="row fullscreen align-items-center justify-content-between">
                 <div class="col-md-6 banner-left">
                     <h6 class="text-white"></h6>
-                    <h1 class="text-white">Tour 360</h1>
+                    <h1 class="text-white">Epidemic Helper</h1>
                     <h6 class="text-white mb-3">
-                       Experience your dream vacation from your home
+                       <!-- Experience your dream vacation from your home -->
                     </h6>
-                    <a href="vendor/profile-page/profile.php" class="btn btn-info btn-lg text-uppercase smooth-scroll">Explore Nepal</a>
+                    <!-- <a href="vendor/profile-page/profile.php" class="btn btn-info btn-lg text-uppercase smooth-scroll">Explore Nepal</a> -->
                 </div>
-
             </div>
         </div>
         <!-- Arrow Down -->
@@ -125,52 +119,46 @@
     <!-- End banner Area -->
 
 
-
-<section id="search-section" class="py-5">
-        <div class="container">
-                <br/>
-                <div class="row justify-content-center">
-                                    <div class="col-12 col-md-10 col-lg-8">
-                                        <form autocomplete="off" class="card card-sm">
-                                            <div class="card-body row no-gutters align-items-center">
-                                                <div class="col-auto mr-2">
-                                                    <i class="fa fa-search fa-2x text-body"></i>
-                                                </div>
-                                                <!--end of col-->
-                                                <div class="col">
-                                                        <input id="myInput" class="form-control form-control-lg form-control-borderless"  type="text" name="myCountry" placeholder="Search places">
-                                                </div>
-                                                <!--end of col-->
-                                                <div class="col-auto">
-                                                    <a class="btn btn-block btn-dark" type="submit" id="recommendationEngine" href="./vendor/profile-page/profile.php">Search</a>
-                                                </div>
-                                                <!--end of col-->
-                                            </div>
-                                        </form>
-                                    </div>
+<!-- 
+    <section id="search-section" class="py-5">
+            <div class="container">
+                    <br/>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form autocomplete="off" class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto mr-2">
+                                        <i class="fa fa-search fa-2x text-body"></i>
+                                    </div> -->
                                     <!--end of col-->
-                                </div>
+                                    <!-- <div class="col">
+                                            <input id="myInput" class="form-control form-control-lg form-control-borderless"  type="text" name="myCountry" placeholder="Search places">
+                                    </div> -->
+                                    <!--end of col-->
+                                    <!-- <div class="col-auto">
+                                        <a class="btn btn-block btn-dark" type="submit" id="recommendationEngine" href="./vendor/profile-page/profile.php">Search</a>
+                                    </div> -->
+                                    <!--end of col-->
+                                <!-- </div>
+                            </form>
+                        </div> -->
+                                    <!--end of col-->
+                    <!-- </div>
             </div>
-
-            
-</section>
+    </section> -->
 
 
 
 
     <div id="services"></div>
 
-
-
-
     <div id="trending"></div>
 
-    <div id="custom-packages">
-    </div>
+    <div id="custom-packages"></div>
 
-    <div id="contact"></div>
+    <!-- <div id="contact"></div>
 
-    <div id="footer"></div>
+    <div id="footer"></div> -->
 
 
 
@@ -181,10 +169,8 @@
     <!--Bootstrap JS-->
     <script src="libs/bootstrap.min.js"></script>
 
-
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="libs/mdb.min.js"></script>
-
 
     <!--Popper JS-->
     <script src="libs/popper.min.js"></script>
@@ -214,8 +200,7 @@
             $("#custom-packages").load("./vendor/custom-packages.php");
             $("#contact").load("./vendor/contact.php");
             $("#footer").load("./vendor/footer.php");
-        });
-        
+        });   
     </script>
 
 </body>

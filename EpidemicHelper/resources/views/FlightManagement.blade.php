@@ -72,12 +72,12 @@
             </tr>
             <tr>
               <th scope="row">2</th>
-              <td>CI</td>
-              <td>0503</td>
-              <td>12/10</td>
-              <td>TPE</td>
+              <td>中華航空</td>
+              <td>CI0501</td>
               <td>台北(桃園) -> 上海(浦東)</td>
-              <td>arrived</td>
+              <td>TPE</td>
+              <td>12/10</td>
+              <td>on time</td>
               <td>第一級</td>
               <td>
                 <button class="update">修改</button>
@@ -213,11 +213,21 @@
 
     <nav aria-label="Page navigation example">
       <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
         <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- <div class="pages">
