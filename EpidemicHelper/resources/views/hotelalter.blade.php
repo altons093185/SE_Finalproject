@@ -3,14 +3,11 @@
   <head>
     <meta charset="ustf-8">
     <link rel="stylesheet" type="text/css" href="../css/general.css">
-    <link href="../css/headers.css" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
-
-  
+    <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
   </head>
    
   <body>
- 
+
     <header class="head">
       <div class="logo">
         <img src="../icon/logo.png" width="200px">  <!-- 點擊可以跳回首頁 -->
@@ -46,33 +43,20 @@
       </div>
     </header>
 
-    <title>航班新增</title>
-    <h1>航班新增</h1>
-    <h4>在此新增航班</h4>
+    <title>旅館修改</title>
+    <h1>旅館修改</h1>
+    <h4>在此修改旅館</h4>
         <br />
         
 
         <div class="queryform">
         <form action="signup" method="post">
-            航班: <input type="text" name="flight" placeholder="請輸入航班..." pattern="[a-zA-Z0-9]{6}" required /> <br/>
-            機場: <input type="text" name="airport"placeholder="請輸入機場縮寫代碼..." pattern="[a-zA-Z]{3}" required/><br/>
-            時間: <input type="datetime-local" name="time"required /><br/>
-
-            <label>防疫等級
-              <select name="Level" maxlength ="3" required></label>
-              <option value="">級別</option>
-              <option value="1">第一級</option>
-              <option value="2">第二級</option>        
-              <option value="3">第三級</option>
-          </select>
-
-              </datalist>
-            
+            旅館名稱: <input type="text" name="flight"/><br/>
+            圖片網址: <input type="text" name="airport"/><br/>
+            旅館網址: <input type="text" name="level"/><br/>
             <br />
             <input type="submit" value="送出"/><input type="reset" value="取消"/><br/>
             </form>
           </div>
-
   </body>
 </html>
-

@@ -4,6 +4,7 @@
     <meta charset="ustf-8">
     <link rel="stylesheet" type="text/css" href="../css/general.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
+    <script src="https://combinatronics.com/LokiYuan/fn_FoolProof/master/Foolproof.js"></script>
     <title>航班查詢</title>
   </head>
    
@@ -41,7 +42,7 @@
         
       </div>
       <div class="login_logout">
-        <button>登出</button> <!-- 1.登出後 2.跳回首頁 -->
+        <button>管理員登入</button> <!-- 1.登出後 2.跳回首頁 -->
       </div>
 
     </header>
@@ -50,9 +51,9 @@
 
     <div class="queryform">
     <form action="signup" method="post">
-       <input type="text" placeholder="出發地">
-       <input type="text" placeholder="目的地">
-       <input type="text" placeholder="去程日期/回程日期">
+       
+       目的地：<select type="text" placeholder="請選擇目的地" required>
+       起程時間：<input type="datetime-local" placeholder="去程日期/回程日期"required>
        <!-- 出發地: <select name="Departure">
           <option value="A">台灣</option>
           <option value="B">日本</option>
@@ -78,11 +79,11 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">航空公司代碼</th>
+          <th scope="col">航空公司名稱</th>
           <th scope="col">班次編號</th>
-          <th scope="col">表訂時間日期</th>
           <th scope="col">城市縮寫</th>
           <th scope="col">城市中文</th>
+          <th scope="col">表訂時間日期</th>
           <th scope="col">狀態</th>
           <th scope="col">防疫等級</th>
         </tr>
@@ -91,36 +92,59 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>CI</td>
-          <td>0501</td>
-          <td>12/10</td>
-          <td>TPE</td>
+          <td>中華航空</td>
+          <td>CI 0501</td>
           <td>台北(桃園) -> 上海(浦東)</td>
+          <td>TPE</td>
+          <td><script type="text/javascript">
+            var myDate = new Date();
+            document.write(myDate.toLocaleString())
+            </script></td>
           <td>on time</td>
           <td>第一級</td>
 
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>CI</td>
-          <td>0503</td>
-          <td>12/10</td>
-          <td>TPE</td>
-          <td>台北(桃園) -> 上海(浦東)</td>
-          <td>arrived</td>
-          <td>第一級</td>
+          <tr>
+            <th scope="row">2</th>
+            <td>中華航空</td>
+            <td>CI 0501</td>
+            <td>台北(桃園) -> 上海(浦東)</td>
+            <td>TPE</td>
+            <td><script type="text/javascript">
+              var myDate = new Date();
+              document.write(myDate.toLocaleString())
+              </script></td>
+            <td>on time</td>
+            <td>第一級</td>
 
+            <tr>
+              <th scope="row">3</th>
+              <td>中華航空</td>
+              <td>CI 0501</td>
+              <td>台北(桃園) -> 上海(浦東)</td>
+              <td>TPE</td>
+              <td><script type="text/javascript">
+                var myDate = new Date();
+                document.write(myDate.toLocaleString())
+                </script></td>
+              <td>on time</td>
+              <td>第一級</td>
+
+              <tr>
+                <th scope="row">4</th>
+                <td>中華航空</td>
+                <td>CI 0501</td>
+                <td>台北(桃園) -> 上海(浦東)</td>
+                <td>TPE</td>
+                <td><script type="text/javascript">
+                  var myDate = new Date();
+                  document.write(myDate.toLocaleString())
+                  </script></td>
+                <td>on time</td>
+                <td>第一級</td>
+
+                
         </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>CI</td>
-          <td>0505</td>
-          <td>12/10</td>
-          <td>TPE</td>
-          <td>台北(桃園) -> 上海(浦東)</td>
-          <td>arrived</td>
-          <td>第一級</td>
-        </tr>
+        
       
       </tbody>
     </table>

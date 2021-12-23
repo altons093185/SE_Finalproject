@@ -21,3 +21,4 @@ Route::get('/',[HomeController::class, 'indexPage']);
 Route::get('/search',[SearchController::class, 'indexPage']);
 
 Route::get('/company',[CompanyController::class, 'indexPage']);
+
