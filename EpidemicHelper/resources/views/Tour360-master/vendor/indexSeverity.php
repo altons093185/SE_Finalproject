@@ -6,7 +6,7 @@
             <main class="pt-5">
                 <div class="container">
                     <!-- Heading -->
-                    <h2 class="mb-5 font-weight-bold text-uppercase">Services</h2>
+                    <h2 class="mb-5 font-weight-bold text-uppercase">最新 防疫等級資訊</h2>
     
                     <!--Grid row-->
                     <div class="row d-flex justify-content-center mb-4">
@@ -15,7 +15,7 @@
                         <div class="col-md-8">
     
                             <!-- Description -->
-                            <p class="grey-text">360 degree view of all places in Nepal! Nepal, official name, Federal Democratic Republic of Nepal, is a landlocked country in South Asia. It is located mainly in the Himalayas, but also includes parts of the Indo-Gangetic Plain. With an estimated population of 26.4 million, it is 48th largest country by population and 93rd largest country by area.</p>
+                            <p class="grey-text">最新消息</p>
     
                         </div>
                         <!--Grid column-->
