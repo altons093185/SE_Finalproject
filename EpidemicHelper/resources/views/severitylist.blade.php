@@ -4,7 +4,7 @@
     <meta charset="ustf-8">
     <link rel="stylesheet" type="text/css" href="../css/general.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> -->
-    <title>防疫等級管理系統</title>
+    <title>防疫等級清單</title>
   </head>
 
   <body>
@@ -23,7 +23,7 @@
       </div>
     </header>
        
-    <h1>防疫等級管理系統</h1>
+    <h1>防疫等級清單</h1>
     <div class="main">
       <table class="table">
         <thead>

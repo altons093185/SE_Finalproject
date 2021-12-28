@@ -51,10 +51,17 @@
 
         <div class="queryform">
         <form action="signup" method="post">
-            航班: <input type="text" name="flight"/><br/>
-            機場: <input type="text" name="airport"/><br/>
-            時間: <input type="time" name="time"/><br/>
-            防疫等級: <input type="text" name="level"/><br/>
+            航班: <input type="text" name="flight"  pattern="[a-zA-Z0-9]{6}" required /> <br/>
+            機場: <input type="text" name="airport" pattern="[a-zA-Z]{3}" required/><br/>
+            時間: <input type="datetime-local" name="time"required /><br/>
+            <label>防疫等級
+              <select name="Level" maxlength ="3" required></label>
+              <option value="">級別</option>
+              <option value="1">第一級</option>
+              <option value="2">第二級</option>        
+              <option value="3">第三級</option>
+              </select>
+            
             <br />
             <input type="submit" value="送出"/><input type="reset" value="取消"/><br/>
             </form>
