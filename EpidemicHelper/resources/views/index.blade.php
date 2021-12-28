@@ -11,25 +11,28 @@
     <link rel="icon" type="image/png" href="../img/favicon.ico" />
 
     <!--Normalise CSS-->
-    <link rel="stylesheet" type="text/css" href="../libs/normalize.css">
+    <link href="{{ asset('libs/normalize.css') }}" rel="stylesheet" type="text/css" >
 
     <!-- Font awesome 5.9-->
-    <link rel="stylesheet" href="../libs/fontawesome/css/all.css">
+    <link href="{{ asset('libs/fontawesome/css/all.css') }}" rel="stylesheet" type="text/css" >
 
     <!--Bootstrap-->
-    <link rel="stylesheet" href="../libs/bootstrap.min.css">
+    <link href="{{ asset('libs/bootstrap.min.css') }}" rel="stylesheet" type="text/css" >
+
 
     <!--Material Design for Bootstrap -->
-    <link rel="stylesheet" href="../libs/mdb.min.css">
+    <link href="{{ asset('libs/mdb.min.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('libs/carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css" >
 
-    <link rel="stylesheet" href="../libs/carousel/owl.carousel.css">
 
     <!--Style css-->
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
-    <link rel="stylesheet" href="../css/homestyle.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/homestyle.css') }}" rel="stylesheet" type="text/css" >
 
+    
     <!--Media Query -->
-    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
+
 
 </head>
 
@@ -112,9 +115,9 @@
     <!-- 載入區塊 -->
     <script>
         $(function () {
-            $("#index_menu").load("./vendor/indexMenu.php"); // 載入菜單
-            $("#index_severity").load("./vendor/indexSeverity.php"); // 載入防疫等級
-            $("#index_hotel").load("./vendor/indexHotel.php"); // 載入防疫旅館
+            $("#index_menu").load("vendor/indexMenu.php"); // 載入菜單
+            $("#index_severity").load("vendor/indexSeverity.php"); // 載入防疫等級
+            $("#index_hotel").load("vendor/indexHotel.php"); // 載入防疫旅館
         });   
     </script>
 
