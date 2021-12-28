@@ -98,6 +98,7 @@ class FlightController extends Controller
     public function show($id)
     {
         //
+        return view ('flightSearch');
     }
 
     public function edit(Flight $flight)

@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SickController;
+use App\Http\Controllers\FlightController;
+use App\Http\Controllers\HotelController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +18,18 @@ use App\Http\Controllers\CompanyController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/default', function () {
     return view('welcome');
 });
+
+Route::get('/',[HomeController::class, 'indexPage']);
+
+Route::get('/flight-search',[FlightController::class, 'show']);
+
+Route::get('/hotel-list',[HotelController::class, 'show']);
+
+Route::get('/severity-level-search',[SickController::class, 'show']);
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
