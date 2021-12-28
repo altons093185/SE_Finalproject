@@ -11,7 +11,7 @@
                         <ul class="nav-menu">
                             <li><a href="index.blade.php" class="smooth-scroll">首頁</a></li>
                             <li><a href="#services" class="smooth-scroll">航班資訊</a></li>
-                            <li><a href="/hotel-list">旅館資訊</a></li>
+                            <li><a href="hotel.blade.php">旅館資訊</a></li>
                             <li><a href="#custom-packages">防疫等級資訊</a></li>
                             <?php 
                                 if(isset($_SESSION['login'])){

@@ -8,7 +8,7 @@
     <title> Tour 360</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="../img/favicon.ico" />
 
     <!--Normalise CSS-->
     <link href="{{ asset('libs/normalize.css') }}" rel="stylesheet" type="text/css" >
@@ -94,22 +94,22 @@
 
     <!-- 載入很多東西 -->
     <!-- JQuery -->
-    <script type="text/javascript" src="libs/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../libs/jquery-3.4.1.min.js"></script>
     <!--Bootstrap JS-->
-    <script src="libs/bootstrap.min.js"></script>
+    <script src="../libs/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="libs/mdb.min.js"></script>
+    <script type="text/javascript" src="../libs/mdb.min.js"></script>
     <!--Popper JS-->
-    <script src="libs/popper.min.js"></script>
-    <script src="libs/carousel/owl.carousel.min.js"></script>
+    <script src="../libs/popper.min.js"></script>
+    <script src="../libs/carousel/owl.carousel.min.js"></script>
     <!--Custom JS -->
-    <script src="js/custom.js"></script>
+    <script src="../js/custom.js"></script>
     <!--Extra JS Libraries-->
-    <script src="js/hoverIntent.js"></script>
-    <script src="js/superfish.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="../js/hoverIntent.js"></script>
+    <script src="../js/superfish.min.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
 
 
     <!-- 載入區塊 -->
