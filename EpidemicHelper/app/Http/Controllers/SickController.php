@@ -53,13 +53,12 @@ class SickController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Sick $Alert_disease)
+    public function show()
     {
-        $Alert_disease = new Sick();
-        return view('search',['area' => $Alert_disease->get_Severity($Alert_disease->input('area'))]);
+       
 
         
-        //return view('severityLevelSearch');
+        return view('severityLevelSearch');
     }
 
     /**
