@@ -72,9 +72,16 @@
 
         <div class="queryform">
         <form action="signup" method="post">
-            旅館名稱: <input type="text" name="flight"/><br/>
-            旅館區域: <input type="text" name="airport"/><br/>
-            旅館網址: <input type="text" name="level"/><br/>
+            旅館名稱: <input type="text" placeholder="請輸入旅館名稱..." name="hotel" required/><br/>
+            <label>旅館區域
+              <select name="Level" maxlength ="3" required></label>
+              <option value="">區域</option>
+              <option value="1">北部旅館</option>
+              <option value="2">中部旅館</option>        
+              <option value="3">南部旅館</option>
+              </select><br/>
+            旅館網址: <input type="url" name="url" required /><br/>
+        
             <br />
             <input type="submit" value="送出"/><input type="reset" value="取消"/><br/>
             </form>
