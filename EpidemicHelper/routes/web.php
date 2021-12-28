@@ -26,7 +26,7 @@ Route::get('/',[HomeController::class, 'indexPage']);
 
 Route::get('/flight-search',[FlightController::class, 'show']);
 
-Route::get('/hotel-list',[HotelController::class, 'show']);
+Route::get('/hotel-list',[HotelController::class, 'index']);
 
 Route::get('/severity-level-search',[SickController::class, 'show']);
 
