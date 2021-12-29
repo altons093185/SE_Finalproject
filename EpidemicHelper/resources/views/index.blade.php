@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-<a href="/hotel-list" ><button type="submit" class="btn btn-primary btn_login">查詢</button></a>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
