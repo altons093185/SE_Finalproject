@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SickController;
 use App\Http\Controllers\FlightController;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,11 @@ Route::get('/',[HomeController::class, 'indexPage']);
 
 Route::get('/flight-search',[FlightController::class, 'show']);
 
+
+
+
 Route::get('/hotel-list',[HotelController::class, 'show']);
+
 
 Route::get('/severity-level-search',[SickController::class, 'show']);
 

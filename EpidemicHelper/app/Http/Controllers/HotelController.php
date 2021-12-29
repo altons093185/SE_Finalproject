@@ -13,7 +13,7 @@ class HotelController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -45,8 +45,8 @@ class HotelController extends Controller
      */
     public function show()
     {
+        return view("hotel");
         
-        return view('hotel');
     }
 
     /**

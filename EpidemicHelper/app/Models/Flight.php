@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +18,16 @@ class Flight extends Model
     protected $primaryKey = 'airplane_id';
     // protected $primaryKey = ['airplane_id', 'airport_id', 'year_id', 'month_id', 'day_id', 'time_id'];
 
+    public function get_flight($airport,$year,$month,$day)
+    {   
 
 
+        $getData = $this::where('airport_id',$airport)->where('year_id',$year)->where('month_id',$month)->where('day_id',$day)->get();
+        //->where('time',$time)
+
+        return $getData;
+        
+    }
+ 
+   
 }
