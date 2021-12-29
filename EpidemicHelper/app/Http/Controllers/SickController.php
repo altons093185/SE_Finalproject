@@ -50,6 +50,9 @@ class SickController extends Controller
     public function store(Request $request)
     {
         //
+        if (Sick::where('country_id',$request->input('_country_name'))->doesntExist()
+        && Severity::where('severity_level_id',$request->input('severity_level_id'))->where('severity_level',$request->input('_severitylevel'))->doesntExist()
+        ){
         Sick::insert(['severity_level_id' => (Severity::count()+5) ,
                         'country_id' => $request->input('_country_name') ,
                         'year_id' => $request->input('_year') ,
@@ -61,7 +64,11 @@ class SickController extends Controller
                           'alert_disease' => $request->input('_alertdiesase'),
                           'severity_level' => $request->input('_severitylevel') ]);
 
-        
+        }
+        else{
+
+            return redirect()->route('sicks.create')->with('error','重複資料存在');
+        }
         return redirect()->route('sicks.index');
     }
 
@@ -103,6 +110,7 @@ class SickController extends Controller
      */
     public function update(Request $request, Sick $sick)
     {
+
         Sick::where('severity_level_id',$sick->severity_level_id)
         ->where('country_id',$sick->country_id)
         ->where('year_id',$sick->year_id)
@@ -115,7 +123,7 @@ class SickController extends Controller
         Severity::where('severity_level_id',$sick->severity_level_id) -> update(['alert_disease' => $request->input('_alertdiesase') ,
                                                                                  'severity_level' => $request->input('_severitylevel')]);
         // $flight->update();
-
+        
         return redirect()->route('sicks.index');
     }
     /**
