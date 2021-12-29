@@ -16,7 +16,6 @@ use App\Models\Month;
 use App\Models\Day;
 use App\Models\Time;
 
-
 use Illuminate\Support\Facades\Gate;
 use Symfony\Component\HttpFoundation\Response;
 class FlightController extends Controller
@@ -96,31 +95,10 @@ class FlightController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($id)
     {
-        $flight = new Flight();
-     
-        $airport = Airport::all();
-        
-        return view('flight_test', ['airport' => $airport ,
-
-
-
-
-        //return view('Flight_test',['airports' => $airport->get_airport() , 
-
-        'flights' => $flight->get_flight($request->input('airport'),$request->input('year'),$request->input('month'),$request->input('day')),
-
-    
-    
-    ]);
-        
-        
-
-
-
+        //
     }
-
 
     public function edit(Flight $flight)
     {

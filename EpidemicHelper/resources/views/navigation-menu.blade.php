@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('管理員首頁') }}
                     </x-jet-nav-link>
                 </div>
 
@@ -25,15 +25,16 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('sicks.index') }}" :active="request()->routeIs('sicks.index')">
-                        {{ __('疫情查詢') }}
+                        {{ __('疫情管理') }}
                     </x-jet-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('Company.index') }}" >
-                        {{ __('Company_edit') }}
+                    <x-jet-nav-link href="{{ route('hotels.index') }}" :active="request()->routeIs('hotels.index')">
+                        {{ __('旅館管理') }}
                     </x-jet-nav-link>
                 </div>
+                
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

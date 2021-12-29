@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Severity extends Model
 {
     use HasFactory;
+    public $timestamps = false; // avoid error;
     protected $table = 'severity';
     public $incrementing = false;
 }

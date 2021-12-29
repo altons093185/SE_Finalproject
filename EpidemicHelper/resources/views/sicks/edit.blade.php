@@ -13,21 +13,56 @@
                     @method('PUT')
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
-                            <label for="severity_name" class="block font-medium text-sm text-gray-700">疫情名稱</label>
-                            <select class="form-select" name="_severity_name">
-                                        @foreach($sopts as $opt)
-                                            @if ($opt->severity_level_id == $sick->severity_level_id)
-                                                <option selected value={{ $opt->severity_level_id}}>
-                                                        {{ $opt->severity_level}}
-                                                </option>
-                                            @else
-                                            <option value={{ $opt->severity_level_id}}>
-                                                    {{ $opt->severity_level}}
-                                            </option>
-                                            @endif
-                                        @endforeach
+                            <label for="_severitylevel" class="block font-medium text-sm text-gray-700">疫情名稱</label>
+                            <select class="form-select" name="_severitylevel">
+                                        <option selected value='黃熱病'>
+                                        黃熱病
+                                        </option>
+                                        <option selected value='麻疹'>
+                                        麻疹
+                                        </option>
+                                        <option selected value='茲卡病毒感染症'>
+                                        茲卡病毒感染症
+                                        </option>
+                                        <option selected value='白喉'>
+                                        白喉
+                                        </option>
+                                        <option selected value='登革熱'>
+                                        登革熱
+                                        </option>
+                                        <option selected value='拉薩熱'>
+                                        拉薩熱
+                                        </option>
+                                        <option selected value='德國麻疹'>
+                                        德國麻疹
+                                        </option>
+                                        <option selected value='屈公病'>
+                                        屈公病
+                                        </option>
+                                        <option selected value='小兒麻痺症/急性無力肢體麻痺'>
+                                        小兒麻痺症/急性無力肢體麻痺
+                                        </option>
+                                        <option selected value='嚴重特殊傳染性肺炎'>
+                                        嚴重特殊傳染性肺炎
+                                        </option>
+
                             </select>
-                            <label for="country_name" class="block font-medium text-sm text-gray-700">國家</label>
+                            <label for="_alertdiesase" class="block font-medium text-sm text-gray-700">疫情等級</label>
+                            <select class="form-select" name="_alertdiesase">
+                                        <option selected value='解除'>
+                                        解除
+                                        </option>
+                                        <option selected value='第一級:注意(Watch)'>
+                                        第一級:注意(Watch)
+                                        </option>
+                                        <option selected value='第二級:警示(Alert)'>
+                                        第二級:警示(Alert)
+                                        </option>
+                                        <option selected value='第三級:警告(Warning)'>
+                                        第三級:警告(Warning)
+                                        </option>
+                            </select>
+                            <label for="_country_name" class="block font-medium text-sm text-gray-700">國家</label>
                             <select class="form-select" name="_country_name">
                                         @foreach($copts as $opt)
                                             @if ($opt->country_id == $sick->country_id)

@@ -8,28 +8,31 @@
     <title> Tour 360</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="../img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
 
     <!--Normalise CSS-->
-    <link rel="stylesheet" type="text/css" href="../libs/normalize.css">
+    <link href="{{ asset('libs/normalize.css') }}" rel="stylesheet" type="text/css" >
 
     <!-- Font awesome 5.9-->
-    <link rel="stylesheet" href="../libs/fontawesome/css/all.css">
+    <link href="{{ asset('libs/fontawesome/css/all.css') }}" rel="stylesheet" type="text/css" >
 
     <!--Bootstrap-->
-    <link rel="stylesheet" href="../libs/bootstrap.min.css">
+    <link href="{{ asset('libs/bootstrap.min.css') }}" rel="stylesheet" type="text/css" >
+
 
     <!--Material Design for Bootstrap -->
-    <link rel="stylesheet" href="../libs/mdb.min.css">
+    <link href="{{ asset('libs/mdb.min.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('libs/carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css" >
 
-    <link rel="stylesheet" href="../libs/carousel/owl.carousel.css">
 
     <!--Style css-->
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
-    <link rel="stylesheet" href="../css/homestyle.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('css/homestyle.css') }}" rel="stylesheet" type="text/css" >
 
+    
     <!--Media Query -->
-    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
+
 
 </head>
 
@@ -91,30 +94,30 @@
 
     <!-- 載入很多東西 -->
     <!-- JQuery -->
-    <script type="text/javascript" src="../libs/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-3.4.1.min.js"></script>
     <!--Bootstrap JS-->
-    <script src="../libs/bootstrap.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="../libs/mdb.min.js"></script>
+    <script type="text/javascript" src="libs/mdb.min.js"></script>
     <!--Popper JS-->
-    <script src="../libs/popper.min.js"></script>
-    <script src="../libs/carousel/owl.carousel.min.js"></script>
+    <script src="libs/popper.min.js"></script>
+    <script src="libs/carousel/owl.carousel.min.js"></script>
     <!--Custom JS -->
-    <script src="../js/custom.js"></script>
+    <script src="js/custom.js"></script>
     <!--Extra JS Libraries-->
-    <script src="../js/hoverIntent.js"></script>
-    <script src="../js/superfish.min.js"></script>
-    <script src="../js/jquery.ajaxchimp.min.js"></script>
-    <script src="../js/jquery.magnific-popup.min.js"></script>
-    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
 
 
     <!-- 載入區塊 -->
     <script>
         $(function () {
-            $("#index_menu").load("./vendor/indexMenu.php"); // 載入菜單
-            $("#index_severity").load("./vendor/indexSeverity.php"); // 載入防疫等級
-            $("#index_hotel").load("./vendor/indexHotel.php"); // 載入防疫旅館
+            $("#index_menu").load("vendor/indexMenu.php"); // 載入菜單
+            $("#index_severity").load("vendor/indexSeverity.php"); // 載入防疫等級
+            $("#index_hotel").load("vendor/indexHotel.php"); // 載入防疫旅館
         });   
     </script>
 

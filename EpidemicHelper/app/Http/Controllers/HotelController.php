@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Hotel;
+use App\Models\City;
 class HotelController extends Controller
 {
     /**
@@ -13,7 +14,11 @@ class HotelController extends Controller
      */
     public function index()
     {
-        
+        //
+        $hotels = Hotel::select('*')
+        ->leftJoin("City", "City.city_id", "=", "Hotel.city_id")
+        ->get();
+        return view('hotels.index' , compact('hotels'));
     }
 
     /**
@@ -24,6 +29,9 @@ class HotelController extends Controller
     public function create()
     {
         //
+        $hopts = Hotel::all();
+        $copts = City::all();
+        return view('hotels.create', compact('hopts','copts'));
     }
 
     /**
@@ -34,7 +42,19 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Hotel::where('hotel_name',$request->input('_hotelname'))
+        ->where('city_id',$request->input('_city_name'))
+        ->doesntExist()) {
+            Hotel::insert(['hotel_id' => (Hotel::count()+1) ,
+                            'hotel_name' => $request->input('_hotelname') ,
+                            'hotel_link' => $request->input('hotel_link') ,
+                            'city_id' => $request->input('_city_name') ]);
+        }
+        else{
+
+            return redirect()->route('hotels.create')->with('error','相同地區已有相同名稱旅館');
+        }
+        return redirect()->route('hotels.index');
     }
 
     /**
@@ -43,10 +63,9 @@ class HotelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        return view("hotel");
-        
+        //
     }
 
     /**
@@ -55,9 +74,12 @@ class HotelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Hotel $hotel)
     {
         //
+        $hopts = Hotel::all();
+        $copts = City::all();
+        return view('hotels.edit', compact('hotel','hopts','copts'));
     }
 
     /**
@@ -67,9 +89,15 @@ class HotelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Hotel $hotel)
     {
-        //
+        Hotel::where('hotel_id',$hotel->hotel_id) -> update(['hotel_name' => $request->input('_hotelname') ,
+                                                             'city_id' => $request->input('_city_name') ,     
+                                                             'hotel_link' => $request->input('_hotel_link')]);
+        
+        // $flight->update();
+
+        return redirect()->route('hotels.index');
     }
 
     /**
@@ -78,8 +106,11 @@ class HotelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Hotel $hotel)
     {
         //
+        Hotel::where('hotel_id',$hotel->hotel_id)-> delete();
+
+        return redirect()->route('hotels.index');
     }
 }
