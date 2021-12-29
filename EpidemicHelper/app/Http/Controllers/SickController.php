@@ -34,6 +34,11 @@ class SickController extends Controller
     public function create()
     {
         //
+        $copts = Country::all();
+        $yopts = Year::all();
+        $mopts = Month::all();
+        $dopts = Day::all();
+        return view('sicks.create' ,compact('yopts','mopts','dopts' ,'copts' ));
     }
 
     /**
@@ -45,6 +50,19 @@ class SickController extends Controller
     public function store(Request $request)
     {
         //
+        Sick::insert(['severity_level_id' => (Severity::count()+5) ,
+                        'country_id' => $request->input('_country_name') ,
+                        'year_id' => $request->input('_year') ,
+                        'month_id' => $request->input('_month') ,
+                        'day_id' => $request->input('_day') ]);
+
+
+        Severity::insert(['severity_level_id' => (Severity::count()+5) ,
+                          'alert_disease' => $request->input('_alertdiesase'),
+                          'severity_level' => $request->input('_severitylevel') ]);
+
+        
+        return redirect()->route('sicks.index');
     }
 
     /**
@@ -53,12 +71,9 @@ class SickController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-       
-
-        
-        return view('severityLevelSearch');
+        //
     }
 
     /**
@@ -70,14 +85,13 @@ class SickController extends Controller
     public function edit(Sick $sick)
     {
         // //
-        $sopts = Severity::all();
         $copts = Country::all();
         $yopts = Year::all();
         $mopts = Month::all();
         $dopts = Day::all();
         
         // $flight = Flight::where('airplane_id',$flightdata->airplane_id)->leftJoin("Airport", "Airport.airport_id", "=", "Flight.airport_id")->get();
-        return view('sicks.edit', compact( 'copts' ,'sopts' ,'yopts','mopts','dopts','sick'));//compact將變數傳出，套用相同變數名稱
+        return view('sicks.edit', compact( 'copts'  ,'yopts','mopts','dopts','sick'));//compact將變數傳出，套用相同變數名稱
     }
 
     /**
@@ -93,12 +107,13 @@ class SickController extends Controller
         ->where('country_id',$sick->country_id)
         ->where('year_id',$sick->year_id)
         ->where('month_id',$sick->month_id)
-        ->where('day_id',$sick->day_id) -> update([     'severity_level_id' => $request->input('severity_name') ,
-                                                        'country_id' => $request->input('_country_name') ,
+        ->where('day_id',$sick->day_id) -> update([     'country_id' => $request->input('_country_name') ,
                                                         'year_id' => $request->input('_year') ,
                                                         'month_id' => $request->input('_month') ,
                                                         'day_id' => $request->input('_day')]);
-        
+
+        Severity::where('severity_level_id',$sick->severity_level_id) -> update(['alert_disease' => $request->input('_alertdiesase') ,
+                                                                                 'severity_level' => $request->input('_severitylevel')]);
         // $flight->update();
 
         return redirect()->route('sicks.index');
@@ -109,8 +124,18 @@ class SickController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Sick $sick)
     {
         //
+        Sick::where('severity_level_id',$sick->severity_level_id)
+        ->where('country_id',$sick->country_id)
+        ->where('year_id',$sick->year_id)
+        ->where('month_id',$sick->month_id)
+        ->where('day_id',$sick->day_id) -> delete();
+
+
+        Severity::where('severity_level_id',$sick->severity_level_id) -> delete();
+
+        return redirect()->route('sicks.index');
     }
 }
