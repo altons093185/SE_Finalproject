@@ -56,8 +56,21 @@
                                    value="{{ old('airplane_time')}}" required>
 
                             <label for="airplane_status" class="block font-medium text-sm text-gray-700">狀態</label>
-                            <input type="text" name="airplane_status" id="airplane_status" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
-                                   value="{{ old('airplane_status') }}" required>
+                            <select class="form-select" name="airplane_status">
+                                        <option selected value='出發DEPARTED'>
+                                        出發DEPARTED
+                                        </option>
+                                        <option  value='已到ARRIVED'>
+                                        已到ARRIVED
+                                        </option>
+                                        <option  value='準時ON TIME'>
+                                        準時ON TIME
+                                        </option>
+                                        <option  value='客機載貨Cargo Only'>
+                                        客機載貨Cargo Only
+                                        </option>
+                            </select>
+                            
                                    @if ($message = Session::get('error'))
                                     <div class="alert alert-success alert-block">
                                         <button type="button" class="close" data-dismiss="alert">×</button>
