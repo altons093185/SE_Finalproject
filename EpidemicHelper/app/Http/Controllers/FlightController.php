@@ -103,7 +103,7 @@ class FlightController extends Controller
      
         $airport = Airport::all();
         
-        return view('flight_test', ['airport' => $airport ,
+        return view('flightsearch', ['airport' => $airport ,
 
 
 

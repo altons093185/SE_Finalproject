@@ -2,7 +2,7 @@
 <div class="login_form">
     <div class="login_label">航班查詢</div>
 
-    <select class="form-select" name="airport">
+    <select class="form-select" name="airport"><!--name不能改-->
         <option selected>選擇目的地</option>
                 @foreach($airport as $article)
                       <option value={{ $article->airport_id}}>
@@ -10,7 +10,7 @@
                       </option>
                 @endforeach
     </select>
-    <input type="text" name="year" required>
+    <input type="text" name="year" required><!--name不能改-->
     <input type="text" name="month" required>
     <input type="text" name="day" required>
     
