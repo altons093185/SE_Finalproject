@@ -20,7 +20,7 @@
 
                             </li>
                         <?php }else{ ?>
-                            <li><a href="./vendor/login/login.php">登入</a>
+                            <li><a href="/login">登入</a>
 
                             </li>
 
