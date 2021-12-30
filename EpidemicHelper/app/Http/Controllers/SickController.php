@@ -26,6 +26,9 @@ class SickController extends Controller
         return view('sicks.index' , compact('sicks'));
     }
 
+
+    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -78,9 +81,42 @@ class SickController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Request $request)//no-url(serverity is id ,not words)
     {
-        return view('severitylist');
+        $country=Country::all();
+
+        $sicks = new Sick();
+
+        
+
+        return view('severitylist', ['country' => $country ,
+
+        'sicks' => $sicks->get_sick($request->input('country'))
+    ]);
+
+    }
+
+    public function index2()//sicktest(ok)
+    {
+        //
+        $sicks = Sick::select('*')
+        ->leftJoin("Severity", "Severity.severity_level_id", "=", "Sick.severity_level_id")
+        ->leftJoin("Country", "Country.country_id", "=", "Sick.country_id")
+        ->paginate(20);
+        return view('sick_test' , compact('sicks'));
+    }
+
+
+    public function index3(Request $request)//severity-level-search(bug)
+    {
+        
+        $country=Country::all();
+
+        $sicks = Sick::select('*')
+        ->leftJoin("Severity", "Severity.severity_level_id", "=", "Sick.severity_level_id")
+        ->leftJoin("Country", "Country.country_id", "=", "Sick.country_id")
+        ->get();
+        return view('severitylist' , ['country' => $country,compact('sicks')]);
     }
 
     /**

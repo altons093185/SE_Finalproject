@@ -26,14 +26,16 @@ Route::get('/default', function () {
 Route::get('/',[HomeController::class, 'indexPage']);
 
 Route::get('/flight-search',[FlightController::class, 'show']);
+Route::get('/sicktest',[SickController::class, 'index2']);
+Route::get('/hoteltest',[HotelController::class, 'index2']);
 
 
 
 
-Route::get('/hotel-list',[HotelController::class, 'show']);
+Route::get('/hotel-list',[HotelController::class, 'index3']);
 
 
-Route::get('/severity-level-search',[SickController::class, 'show']);
+Route::get('/severity-level-search',[SickController::class, 'index3']);
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

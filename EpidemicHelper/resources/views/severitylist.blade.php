@@ -22,13 +22,30 @@
         <button class="login-logout">登出</button> <!-- 1.登出後 2.跳回首頁 -->
       </div>
     </header>
+
+    <form id="form1" method="GET" action="">
+<div class="login_form">
+    <div class="login_label">疫情查詢</div>
+
+    <select class="form-select" name="country"><!--name不能改-->
+        <option selected>選擇國家</option>
+        @foreach($country as $article)
+                      <option value={{ $article->country_id}}>
+                            {{ $article->country_name}}
+                      </option>
+                @endforeach
+    </select>
+    <div class="btn_group">
+        <button type="submit" class="btn btn-primary btn_login">查詢</button>
+    </div>
+
        
     <h1>防疫等級清單</h1>
     <div class="main">
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            
             <th scope="col">防疫等級</th>
             <th scope="col">疾病名稱</th>
             <th scope="col">國家/區域</th>
@@ -37,30 +54,49 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>第一級:注意(Watch)</td>
-            <td>中東呼吸症候群冠狀病毒感染症</td>
-            <td>阿拉伯聯合大公國</td>
-            <td>2015-09-30</td>
+       
 
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>第一級:注意(Watch)</td>
-            <td>新型A型流感</td>
-            <td>印度</td>
-            <td>2021-08-13</td>
 
-          </tr>
+
+        @foreach ($sicks as $sick)
+
+                                    <tr>
+                                        <td >
+                                            {{ $sick->severity_level }}
+                                        </td>
+                                        <td >
+                                            {{ $sick->country_name }}
+                                        </td>
+                                        <td >
+                                            {{ $sick->alert_disease }}
+                                        </td>
+                                        <td >
+                                        </td>
+                                        <td >
+                                            {{ $sick->year_id }}
+                                        </td>
+                                        <td >
+                                            {{ $sick->month_id }}
+                                        </td>
+                                        <td >
+                                            {{ $sick->day_id }}
+                                        </td>  
+                                        @endforeach
+
+<!--
+        @foreach($sicks as $article)  
           <tr>
-            <th scope="row">3</th>
-            <td>第二級:警示(Alert)</td>
-            <td>茲卡病毒感染症</td>
-            <td>印度</td>
-            <td>2021-07-13</td>
- 
-          </tr>
+          <td>{{$article->severity_level}}</td>
+          <td>{{$article->alert_disease}}</td>
+         
+            <td> {{ $article->severity_level_id }}</td>
+            <td>{{ $article->country_id }}</td>
+            <td>{{ $article->year_id }}/{{ $article->month_id }}/{{ $article->day_id }}</td>
+</tr>
+          
+         @endforeach
+         
+-->
         </tbody>
 
         <!-- <tfoot>

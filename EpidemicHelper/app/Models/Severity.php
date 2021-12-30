@@ -11,4 +11,14 @@ class Severity extends Model
     public $timestamps = false; // avoid error;
     protected $table = 'severity';
     public $incrementing = false;
+
+
+
+    public function get_severityInfo($res)
+    {   
+        $getData = $this::where('airport_id',$res)->value('severity_level_id');
+        $severity = new Severity();
+        return $severity->get_Severity($getData);
+        
+    }
 }
