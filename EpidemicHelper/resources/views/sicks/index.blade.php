@@ -78,6 +78,9 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class=pagination>
+                                        {{$sicks->links()}}
+</div>
                     </div>
         </div>
     </div>

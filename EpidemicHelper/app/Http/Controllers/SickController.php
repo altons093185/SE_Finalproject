@@ -22,7 +22,7 @@ class SickController extends Controller
         $sicks = Sick::select('*')
         ->leftJoin("Severity", "Severity.severity_level_id", "=", "Sick.severity_level_id")
         ->leftJoin("Country", "Country.country_id", "=", "Sick.country_id")
-        ->get();
+        ->paginate(20);
         return view('sicks.index' , compact('sicks'));
     }
 

@@ -48,5 +48,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('flights', \App\Http\Controllers\FlightController::class);
     Route::resource('sicks', \App\Http\Controllers\SickController::class);
     Route::resource('Company', CompanyController::Class);
+    Route::resource('hotels', \App\Http\Controllers\HotelController::class);
 
 });

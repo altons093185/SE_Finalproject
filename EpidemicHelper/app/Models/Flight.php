@@ -22,9 +22,10 @@ class Flight extends Model
     {   
 
 
-        $getData = $this::where('airport_id',$airport)->where('year_id',$year)->where('month_id',$month)->where('day_id',$day)->get();
+        $getData = $this::where('airport_id',$airport)->where('year_id',$year)->where('month_id',$month)->where('day_id',$day)->get()->sortBy('time_id');
         //->where('time',$time)
-
+        
+        
         return $getData;
         
     }

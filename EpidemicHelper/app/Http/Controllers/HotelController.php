@@ -17,11 +17,11 @@ class HotelController extends Controller
         //
         $hotels = Hotel::select('*')
         ->leftJoin("City", "City.city_id", "=", "Hotel.city_id")
-        ->get();
+        ->paginate(20);
         return view('hotels.index' , compact('hotels'));
     }
 
-    public function index2()//hoteltest(ok)
+    public function index2()//hoteltest(清單版ok)
     {
         //
         $hotels = Hotel::select('*')
@@ -30,7 +30,7 @@ class HotelController extends Controller
         return view('hotel_test' , compact('hotels'));
     }
 
-    public function index3()//hotel-list()
+    public function index3()//hotel-list(圖片版ok)
     {
         //
         $hotels = Hotel::select('*')

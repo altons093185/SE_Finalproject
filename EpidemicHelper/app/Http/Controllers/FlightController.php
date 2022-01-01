@@ -32,13 +32,16 @@ class FlightController extends Controller
         //
         // $flights = Flight::all();
         $flights = Flight::select('*')
+        
         ->leftJoin("Airport", "Airport.airport_id", "=", "Flight.airport_id")
         ->leftJoin("Airplane", "Airplane.airplane_id", "=", "Flight.airplane_id")
         ->leftJoin("Company", "Company.company_id", "=", "Airplane.company_id")
         ->leftJoin("Country", "Country.country_id", "=", "Airport.country_id")
-        ->limit (10) -> offset(0)
-        ->get()
-        ->sortBy('day_id');
+        //->limit (10) -> offset(0)
+        ->orderBy('day_id','ASC')
+        //->sortBy('day_id')
+        ->paginate(20);
+        //;
         return view('flights.index' , compact('flights'));
     }
 
@@ -102,8 +105,9 @@ class FlightController extends Controller
         $flight = new Flight();
      
         $airport = Airport::all();
+        $airports =new Airport();
         
-        return view('flightsearch', ['airport' => $airport ,
+        return view('flight_test', ['airport' => $airport ,
 
 
 
@@ -111,6 +115,8 @@ class FlightController extends Controller
         //return view('Flight_test',['airports' => $airport->get_airport() , 
 
         'flights' => $flight->get_flight($request->input('airport'),$request->input('year'),$request->input('month'),$request->input('day')),
+        'sicks'=> $airports->get_severityInfo1($request->input('airport')),
+        'severitys' => $airports->get_severityInfo($request->input('airport'))//goto Airport.php
 
     
     
