@@ -1,6 +1,6 @@
 <section id="menu">    
     <!-- 上面的header -->
-        <header id="header">
+        <header id="header" class="header-scrolled">
             <div class="header-top"></div>
             <div class="container main-menu">
                 <div class="row align-items-center justify-content-between d-flex">
@@ -32,4 +32,4 @@
                 </div>
             </div>
         </header><!-- #header -->
-    </section>
+</section>

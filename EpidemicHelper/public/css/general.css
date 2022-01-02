@@ -87,8 +87,9 @@ body{
 }
 
 table{
+  width: auto!important;
   border-collapse: collapse;
-  margin: auto;
+  margin: auto!important;
 }
 
 thead{
@@ -112,6 +113,10 @@ tr{
   border-radius: 200px;
 }
 
+tbody{
+  color: black;
+}
+
 tbody tr:hover{
   background-color: #ddd;
 }
@@ -133,6 +138,7 @@ tr:nth-child(even){
 .queryform{
   display: flex;
   justify-content: center;
+  margin: 12px 0px 18px;
 }
 
 /* .pages a:hover{
