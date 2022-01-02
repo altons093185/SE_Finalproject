@@ -12,7 +12,7 @@
                             <li><a href="/" class="smooth-scroll">首頁</a></li>
                             <li><a href="/flight-search" class="smooth-scroll">航班資訊</a></li>
                             <li><a href="/hotel-list">旅館資訊</a></li>
-                            <li><a href="/severity-level-search">防疫等級資訊</a></li>
+                            <li><a href="/sicktest">防疫等級資訊</a></li>
                             <?php 
                                 if(isset($_SESSION['login'])){
                             ?>
