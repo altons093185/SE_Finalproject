@@ -17,15 +17,25 @@ class Sick extends Model
     
 
     public function get_sick($country)
-    {   
+    {   //call by airport
 
-
-        $getData = $this::where('country_id',$country)->get();
+        //$date =timestamp('year_id','month_id','day_id');
+      
+        $getData = $this::where('country_id',$country)->leftJoin("Severity", "Severity.severity_level_id", "=", "Sick.severity_level_id")->get()
+        ->sortBy('year_id');
         //->where('db欄位',view欄位name)
 
-        return $getData;
+
+        return $getData;//傳回發布日期
         
     }
+    public function get_sick1($res)
+    {   
+        $getData = $this::where('country_id',$res)->value('severity_level_id');
+        $severity=new Severity();
 
+        return $severity->get_severity1($getData);
+        
+    }
 
 }

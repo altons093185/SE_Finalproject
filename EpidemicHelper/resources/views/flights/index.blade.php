@@ -92,6 +92,9 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    <div class=pagination>
+                                        {{$flights->links()}}
+</div>
                                 </div>
                     </div>
                 </div>

@@ -9,6 +9,7 @@
                             {{ $article->airport_name}}
                       </option>
                 @endforeach
+                
     </select>
     <input type="text" name="year" required><!--name不能改-->
     <input type="text" name="month" required>
@@ -19,6 +20,22 @@
 <div class="btn_group">
         <button type="submit" class="btn btn-primary btn_login">查詢</button>
     </div>
+<!--
+    @foreach($sicks as $sick)
+        疫情名稱 :{{ $sick->severity_level }}  
+            <p> 疫情等級 :{{ $sick->alert_disease }} </p>
+        
+       
+@endforeach
+-->
+
+    @foreach($severitys as $severity)
+    <b>疫情名稱:</b>{{ $severity->severity_level }}<b>|</b>
+    <b>疫情等級:</b>{{ $severity->alert_disease }}<b>|</b>
+    <b>發布日期:</b>{{ $severity->year_id }}/{{ $severity->month_id}}/{{ $severity->day_id}}
+        <br>
+@endforeach
+<hr>
 
 @foreach($flights as $article)
         <h1>航班 : {{ $article->airplane_id }}
