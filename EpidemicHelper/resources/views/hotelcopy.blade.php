@@ -40,7 +40,7 @@
 
     <!-- 飯店資訊區塊 -->
     <section id="trending" class="p-5">
-        <h2 class="mb-5 font-weight-bold text-center">台北/新北/基隆 旅館資訊</h2>
+        <h2 class="mb-5 font-weight-bold text-center">防疫旅館資訊</h2>
 
         <!-- 一橫列旅館 -->
         <div class="row">
