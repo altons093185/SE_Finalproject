@@ -39,8 +39,11 @@
 
 @foreach($flights as $article)
         <h1>航班 : {{ $article->airplane_id }}
+        <p> 航空公司:{{ $article->company_name}}</p>
             <p> 起飛日期 : {{ $article->year_id}}/{{ $article->month_id}}/{{ $article->day_id}}</p>
             <p> 起飛時間 : {{ $article->time_id}}</p>
+            <p>狀態:{{ $article->status}}</p>
+            
         </h1>
         <hr>
 @endforeach

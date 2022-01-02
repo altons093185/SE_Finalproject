@@ -22,7 +22,11 @@ class Flight extends Model
     {   
 
 
-        $getData = $this::where('airport_id',$airport)->where('year_id',$year)->where('month_id',$month)->where('day_id',$day)->get()->sortBy('time_id');
+        $getData = $this::where('airport_id',$airport)->where('year_id',$year)->where('month_id',$month)->where('day_id',$day)
+        ->leftJoin("Airplane", "Flight.airplane_id", "=", "Airplane.airplane_id")
+        ->leftJoin("Company", "Airplane.company_id", "=", "Company.company_id")
+        ->get()
+        ->sortBy('time_id');
         //->where('time',$time)
         
         
