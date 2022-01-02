@@ -35,7 +35,7 @@ class HotelController extends Controller
         //
         $hotels = Hotel::select('*')
         ->leftJoin("City", "City.city_id", "=", "Hotel.city_id")
-        ->get();
+        ->paginate(9);
         return view('hotelcopy' , compact('hotels'));
     }
 

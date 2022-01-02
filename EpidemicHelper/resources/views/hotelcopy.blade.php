@@ -102,5 +102,7 @@
     </script>
 
 </body>
-
+<div>
+      {{$hotels->links()}}
+  </div>
 </html>
