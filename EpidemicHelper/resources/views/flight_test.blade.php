@@ -85,21 +85,21 @@
         @endforeach
     -->
 
-        @foreach($severitys as $severity)
-            <b>疫情名稱:</b>{{ $severity->severity_level }}<b>|</b>
-            <b>疫情等級:</b>{{ $severity->alert_disease }}<b>|</b>
-            <b>發布日期:</b>{{ $severity->year_id }}/{{ $severity->month_id}}/{{ $severity->day_id}}
-        @endforeach 
+       
+<br>
 
-        <hr>
+<!--
+    @foreach($sicks as $sick)
+        疫情名稱 :{{ $sick->severity_level }}  
+            <p> 疫情等級 :{{ $sick->alert_disease }} </p>
+        
+       
+@endforeach
+-->
 
-        @foreach($flights as $article)
-            <h1>航班 : {{ $article->airplane_id }}
-                <p> 起飛日期 : {{ $article->year_id}}/{{ $article->month_id}}/{{ $article->day_id}}</p>
-                <p> 起飛時間 : {{ $article->time_id}}</p>
-            </h1>
-            <hr>
-        @endforeach
+    
+
+
 
     </div>
     </form>
@@ -107,83 +107,39 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">航空公司名稱</th>
-          <th scope="col">班次編號</th>
-          <th scope="col">城市縮寫</th>
-          <th scope="col">城市中文</th>
-          <th scope="col">表訂時間日期</th>
-          <th scope="col">狀態</th>
-          <th scope="col">防疫等級</th>
-          <th scope="col">疾病名稱</th>
+          <th scope="col">疫情名稱</th>
+          <th scope="col">疫情等級</th>
+          <th scope="col">發布日期</th>
         </tr>
       </thead>
-
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>中華航空</td>
-          <td>CI 0501</td>
-          <td>台北(桃園) -> 上海(浦東)</td>
-          <td>TPE</td>
-          <td><script type="text/javascript">
-            var myDate = new Date();
-            document.write(myDate.toLocaleString())
-            </script></td>
-          <td>on time</td>
-          <td>第一級</td>
-          <td>肺炎</td>
+      @foreach($severitys as $severity)
+        <tr>    
+          <td>{{ $severity->severity_level }}</td>
+          <td>{{ $severity->alert_disease }}</td>
+          <td>{{ $severity->year_id }}/{{ $severity->month_id}}/{{ $severity->day_id}}</td>              
+    </tr>
+    @endforeach
+       
 
-        <tr>
-            <th scope="row">2</th>
-            <td>中華航空</td>
-            <td>CI 0501</td>
-            <td>台北(桃園) -> 上海(浦東)</td>
-            <td>TPE</td>
-            <td><script type="text/javascript">
-              var myDate = new Date();
-              document.write(myDate.toLocaleString())
-              </script></td>
-            <td>on time</td>
-            <td>第一級</td>
-            <td>流感</td>
-
-            <tr>
-              <th scope="row">3</th>
-              <td>中華航空</td>
-              <td>CI 0501</td>
-              <td>台北(桃園) -> 上海(浦東)</td>
-              <td>TPE</td>
-              <td><script type="text/javascript">
-                var myDate = new Date();
-                document.write(myDate.toLocaleString())
-                </script></td>
-              <td>on time</td>
-              <td>第一級</td>
-              <td>狂犬病</td>
-
-              <tr>
-                <th scope="row">4</th>
-                <td>中華航空</td>
-                <td>CI 0501</td>
-                <td>台北(桃園) -> 上海(浦東)</td>
-                <td>TPE</td>
-                <td><script type="text/javascript">
-                  var myDate = new Date();
-                  document.write(myDate.toLocaleString())
-                  </script></td>
-                <td>on time</td>
-                <td>第一級</td>
-                <td>茲卡病毒</td>
-              </tr>
       </tbody>
     </table>
 
 <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">航空公司名稱</th>
+
+          <th scope="col">航空公司</th>
+          <th scope="col">班次編號</th>
+          <th scope="col">起飛日期</th>
+          <th scope="col">起飛時間</th>
+          <th scope="col">狀態</th>
+        
+        </tr>
+      </thead>
+<!--模板
+      <th scope="col">#</th>
+          <th scope="col">航空公司</th>
           <th scope="col">班次編號</th>
           <th scope="col">城市縮寫</th>
           <th scope="col">城市中文</th>
@@ -191,10 +147,8 @@
           <th scope="col">狀態</th>
           <th scope="col">防疫等級</th>
           <th scope="col">疾病名稱</th>
-        </tr>
-      </thead>
 
-      <tbody>
+           <tbody>
         <tr>
           <th scope="row">1</th>
           <td>中華航空</td>
@@ -209,48 +163,23 @@
           <td>第一級</td>
           <td>肺炎</td>
 
+    -->
+
+
+      <tbody>
+
+      @foreach($flights as $article)
+     
+
         <tr>
-            <th scope="row">2</th>
-            <td>中華航空</td>
-            <td>CI 0501</td>
-            <td>台北(桃園) -> 上海(浦東)</td>
-            <td>TPE</td>
-            <td><script type="text/javascript">
-              var myDate = new Date();
-              document.write(myDate.toLocaleString())
-              </script></td>
-            <td>on time</td>
-            <td>第一級</td>
-            <td>流感</td>
 
-            <tr>
-              <th scope="row">3</th>
-              <td>中華航空</td>
-              <td>CI 0501</td>
-              <td>台北(桃園) -> 上海(浦東)</td>
-              <td>TPE</td>
-              <td><script type="text/javascript">
-                var myDate = new Date();
-                document.write(myDate.toLocaleString())
-                </script></td>
-              <td>on time</td>
-              <td>第一級</td>
-              <td>狂犬病</td>
-
-              <tr>
-                <th scope="row">4</th>
-                <td>中華航空</td>
-                <td>CI 0501</td>
-                <td>台北(桃園) -> 上海(浦東)</td>
-                <td>TPE</td>
-                <td><script type="text/javascript">
-                  var myDate = new Date();
-                  document.write(myDate.toLocaleString())
-                  </script></td>
-                <td>on time</td>
-                <td>第一級</td>
-                <td>茲卡病毒</td>
-              </tr>
+          <td>{{ $article->company_name}}</td>
+          <td>{{ $article->airplane_id }}</td>
+          <td>{{ $article->year_id}}/{{ $article->month_id}}/{{ $article->day_id}}</td>
+          <td>{{ $article->time_id}}</td>
+          <td>{{ $article->status}}</td>
+    </tr>
+          @endforeach 
       </tbody>
     </table>    
 </section>
