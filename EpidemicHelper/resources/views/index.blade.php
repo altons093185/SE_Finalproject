@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../css/general.css">
     <title> Tour 360</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,17 +20,14 @@
     <!--Bootstrap-->
     <link href="{{ asset('libs/bootstrap.min.css') }}" rel="stylesheet" type="text/css" >
 
-
     <!--Material Design for Bootstrap -->
     <link href="{{ asset('libs/mdb.min.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('libs/carousel/owl.carousel.css') }}" rel="stylesheet" type="text/css" >
-
 
     <!--Style css-->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/homestyle.css') }}" rel="stylesheet" type="text/css" >
 
-    
     <!--Media Query -->
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css" >
 
@@ -91,6 +89,8 @@
 
     <!-- 防疫旅館資訊 -->
     <div id="index_hotel"></div>
+
+
 
     <!-- 載入很多東西 -->
     <!-- JQuery -->

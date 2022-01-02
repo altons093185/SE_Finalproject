@@ -2478,6 +2478,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-left h1 {
+  text-align: left;
   margin: 20px 0;
   font-size: 60px;
   text-transform: uppercase;
