@@ -59,11 +59,11 @@
     <h1>航班搜尋</h1>
 
         <!-- 查詢區塊 -->
-    <form method="GET" action="">
-    <div >
-        <div >航班查詢</div>
+    <form id="form1" method="GET" action="">
+    <div class="login_form row">
+        <div class="login_label">航班查詢</div>
         <!-- 查詢欄位 -->
-        <select  name="airport"><!--name不能改-->
+        <select class="form-select" name="airport"><!--name不能改-->
             <option selected>選擇目的地</option>
                     @foreach($airport as $article)
                         <option value={{ $article->airport_id}}>
