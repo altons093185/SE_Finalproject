@@ -58,7 +58,8 @@
     <section>
     <h1>航班搜尋</h1>
 
-        <!-- 查詢區塊 -->
+    <!-- 查詢區塊 -->
+    <div class="pagination">
     <form id="form1" method="GET" action="">
     <div class="login_form row">
         <div class="login_label">航班查詢</div>
@@ -84,7 +85,7 @@
                 <p> 疫情等級 :{{ $sick->alert_disease }} </p>
         @endforeach
     -->
-
+    </div>
        
 <br>
 
