@@ -54,7 +54,13 @@ class SickController extends Controller
     public function store(Request $request)
     {
         //
-        if (Sick::where('country_id',$request->input('_country_name'))->doesntExist()
+        if ((Sick::where('country_id',$request->input('_country_name'))
+        ->where('year_id',$request->input('_year'))
+        ->where('month_id',$request->input('_month'))
+        ->where('day_id',$request->input('_day'))
+        
+        
+        )->doesntExist()
         && Severity::where('severity_level_id',$request->input('severity_level_id'))->where('severity_level',$request->input('_severitylevel'))->doesntExist()
         ){
         Sick::insert(['severity_level_id' => (Severity::count()+50) ,

@@ -66,7 +66,7 @@ class HotelController extends Controller
         ->doesntExist()) {
             Hotel::insert(['hotel_id' => (Hotel::count()+1) ,
                             'hotel_name' => $request->input('_hotelname') ,
-                            'hotel_link' => $request->input('hotel_link') ,
+                            'hotel_link' => $request->input('_hotel_link') ,
                             'city_id' => $request->input('_city_name') ]);
         }
         else{
