@@ -58,7 +58,7 @@
     <section>
     <h1>航班搜尋</h1>
 
-        <!-- 查詢區塊 -->
+    <!-- 查詢區塊 -->
     <form id="form1" method="GET" action="">
     <div class="login_form row">
         <div class="login_label">航班查詢</div>
@@ -104,6 +104,7 @@
     </div>
     </form>
 
+    <div class="row">
     <table class="table">
       <thead>
         <tr>
@@ -180,7 +181,8 @@
     </tr>
           @endforeach 
       </tbody>
-    </table>    
+    </table>
+    </div>    
 </section>
 
 
