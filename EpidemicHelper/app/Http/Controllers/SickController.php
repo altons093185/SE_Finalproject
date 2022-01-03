@@ -22,6 +22,7 @@ class SickController extends Controller
         $sicks = Sick::select('*')
         ->leftJoin("Severity", "Severity.severity_level_id", "=", "Sick.severity_level_id")
         ->leftJoin("Country", "Country.country_id", "=", "Sick.country_id")
+        ->orderBy('year_id','desc')
         ->paginate(20);
         return view('sicks.index' , compact('sicks'));
     }
@@ -56,14 +57,14 @@ class SickController extends Controller
         if (Sick::where('country_id',$request->input('_country_name'))->doesntExist()
         && Severity::where('severity_level_id',$request->input('severity_level_id'))->where('severity_level',$request->input('_severitylevel'))->doesntExist()
         ){
-        Sick::insert(['severity_level_id' => (Severity::count()+5) ,
+        Sick::insert(['severity_level_id' => (Severity::count()+50) ,
                         'country_id' => $request->input('_country_name') ,
                         'year_id' => $request->input('_year') ,
                         'month_id' => $request->input('_month') ,
                         'day_id' => $request->input('_day') ]);
 
 
-        Severity::insert(['severity_level_id' => (Severity::count()+5) ,
+        Severity::insert(['severity_level_id' => (Severity::count()+50) ,
                           'alert_disease' => $request->input('_alertdiesase'),
                           'severity_level' => $request->input('_severitylevel') ]);
 
@@ -99,9 +100,11 @@ class SickController extends Controller
     public function index2()//sicktest(ok)
     {
         //
+        
         $sicks = Sick::select('*')
         ->leftJoin("Severity", "Severity.severity_level_id", "=", "Sick.severity_level_id")
         ->leftJoin("Country", "Country.country_id", "=", "Sick.country_id")
+        ->orderBy('year_id','desc')
         ->paginate(20);
         return view('sick_test' , compact('sicks'));
     }

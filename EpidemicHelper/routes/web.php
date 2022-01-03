@@ -29,7 +29,7 @@ Route::get('/flight-search',[FlightController::class, 'show']);
 Route::get('/sicktest',[SickController::class, 'index2']);
 Route::get('/hoteltest',[HotelController::class, 'index2']);
 
-
+Route::get('/search',[SickController::class, 'search']);
 
 
 Route::get('/hotel-list',[HotelController::class, 'index3']);

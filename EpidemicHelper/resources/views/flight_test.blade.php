@@ -172,7 +172,6 @@
      
 
         <tr>
-
           <td>{{ $article->company_name}}</td>
           <td>{{ $article->airplane_id }}</td>
           <td>{{ $article->year_id}}/{{ $article->month_id}}/{{ $article->day_id}}</td>
@@ -219,4 +218,5 @@
   </script>
 
   </body>
+ 
 </html>

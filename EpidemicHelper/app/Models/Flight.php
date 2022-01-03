@@ -29,8 +29,8 @@ class Flight extends Model
         ->sortBy('time_id');
         //->where('time',$time)
         
-        
-        return $getData;
+  
+            return $getData;
         
     }
  

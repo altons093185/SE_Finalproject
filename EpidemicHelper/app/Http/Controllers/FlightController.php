@@ -38,7 +38,7 @@ class FlightController extends Controller
         ->leftJoin("Company", "Company.company_id", "=", "Airplane.company_id")
         ->leftJoin("Country", "Country.country_id", "=", "Airport.country_id")
         //->limit (10) -> offset(0)
-        ->orderBy('day_id','ASC')
+        ->orderBy('year_id','desc')
         //->sortBy('day_id')
         ->paginate(20);
         //;

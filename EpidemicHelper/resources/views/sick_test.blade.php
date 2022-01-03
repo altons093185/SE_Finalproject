@@ -30,6 +30,9 @@
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="https://combinatronics.com/LokiYuan/fn_FoolProof/master/Foolproof.js"></script>
 
+
+
+
     <title>防疫等級清單</title>
     
     <style>
@@ -49,6 +52,10 @@
   <section>
     <h1>防疫等級清單</h1>
     
+<form action="" method="GET" class="input-group">
+<input type="search" class="form-control" name="query" placeholder="Search">
+
+</form>
     <div class="main">
       <table class="table">
         <thead>
