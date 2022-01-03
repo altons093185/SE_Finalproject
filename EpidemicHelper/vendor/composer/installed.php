@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'c646d82d698889953bc737c98cb311a0df341c97',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -449,12 +449,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'c646d82d698889953bc737c98cb311a0df341c97',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -527,6 +527,15 @@
             'install_path' => __DIR__ . '/../league/mime-type-detection',
             'aliases' => array(),
             'reference' => 'aa70e813a6ad3d1558fc927863d47309b4c23e69',
+            'dev_requirement' => false,
+        ),
+        'league/pipeline' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/pipeline',
+            'aliases' => array(),
+            'reference' => 'aa14b0e3133121f8be39e9a3b6ddd011fc5bb9a8',
             'dev_requirement' => false,
         ),
         'livewire/livewire' => array(
@@ -671,7 +680,7 @@
             'install_path' => __DIR__ . '/../phpdocumentor/reflection-common',
             'aliases' => array(),
             'reference' => '1d01c49d4ed62f25aa84a747ad35d5a16924662b',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'phpdocumentor/reflection-docblock' => array(
             'pretty_version' => '5.3.0',
@@ -680,7 +689,7 @@
             'install_path' => __DIR__ . '/../phpdocumentor/reflection-docblock',
             'aliases' => array(),
             'reference' => '622548b623e81ca6d78b721c5e029f4ce664f170',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'phpdocumentor/type-resolver' => array(
             'pretty_version' => '1.5.1',
@@ -689,7 +698,7 @@
             'install_path' => __DIR__ . '/../phpdocumentor/type-resolver',
             'aliases' => array(),
             'reference' => 'a12f7e301eb7258bb68acd89d4aefa05c2906cae',
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'phpoption/phpoption' => array(
             'pretty_version' => '1.8.1',
@@ -762,6 +771,15 @@
             'aliases' => array(),
             'reference' => 'c814a05837f2edb0d1471d6e3f4ab3501ca3899a',
             'dev_requirement' => true,
+        ),
+        'phuml/phuml' => array(
+            'pretty_version' => '5.2.1',
+            'version' => '5.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phuml/phuml',
+            'aliases' => array(),
+            'reference' => '68212e97979bc463ef7614af37d6b873f76dbdb3',
+            'dev_requirement' => false,
         ),
         'pragmarx/google2fa' => array(
             'pretty_version' => '8.0.0',
@@ -1133,6 +1151,15 @@
                 0 => '2.0|3.0',
             ),
         ),
+        'symfony/filesystem' => array(
+            'pretty_version' => 'v6.0.0',
+            'version' => '6.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/filesystem',
+            'aliases' => array(),
+            'reference' => '52b3c9cce673b014915445a432339f282e002ce6',
+            'dev_requirement' => false,
+        ),
         'symfony/finder' => array(
             'pretty_version' => 'v5.4.0',
             'version' => '5.4.0.0',
@@ -1328,6 +1355,15 @@
             'reference' => '2366ac8d8abe0c077844613c1a4f0c0a9f522dcc',
             'dev_requirement' => false,
         ),
+        'symplify/smart-file-system' => array(
+            'pretty_version' => '9.4.70',
+            'version' => '9.4.70.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symplify/smart-file-system',
+            'aliases' => array(),
+            'reference' => 'bc9caf6258dabedc032aad4041bc58fd322aa660',
+            'dev_requirement' => false,
+        ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',
             'version' => '1.2.1.0',
@@ -1344,6 +1380,15 @@
             'install_path' => __DIR__ . '/../tijsverkoyen/css-to-inline-styles',
             'aliases' => array(),
             'reference' => 'da444caae6aca7a19c0c140f68c6182e337d5b1c',
+            'dev_requirement' => false,
+        ),
+        'twig/twig' => array(
+            'pretty_version' => 'v3.3.4',
+            'version' => '3.3.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twig/twig',
+            'aliases' => array(),
+            'reference' => '65cb6f0b956485e1664f13d023c55298a4bb59ca',
             'dev_requirement' => false,
         ),
         'vlucas/phpdotenv' => array(

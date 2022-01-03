@@ -60,7 +60,7 @@
     <!-- End banner Area -->
 
 
-    <!-- 航班搜尋欄 -->
+    <!-- 航班搜尋欄 
     <section id="search-section" class="py-5">
         <div class="container">
             <br/>
@@ -82,7 +82,7 @@
                 </div> 
                 </div>
         </div>
-    </section> 
+    </section> -->
 
     <!-- 防疫等級資訊 -->
     <div id="index_severity"></div>

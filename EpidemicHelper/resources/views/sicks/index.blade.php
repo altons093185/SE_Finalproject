@@ -1,14 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Sicks List') }}
+            {{ __('Severity Level List') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="block mb-8">
-                <a href="{{ route('sicks.create') }}" class="bg-green-500 hover:bg-green-700  font-bold py-2 px-4 rounded">Add Sick</a>
+                <a href="{{ route('sicks.create') }}" class="bg-green-500 hover:bg-green-700  font-bold py-2 px-4 rounded">Add Severity Level</a>
             </div>
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">

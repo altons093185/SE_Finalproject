@@ -89,7 +89,7 @@ displayHotelImg();*/
                         
 
                         <?php
-                            $rand = rand(1,12);
+                            $rand = rand(1,40);
                             $hotel_image = "img/hotels/hotel_" .  strval($rand) . ".jpg";
                         ?>
 
