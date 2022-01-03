@@ -60,6 +60,11 @@ displayHotelImg();*/
     <!--Media Query -->
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
+    <style>
+      section{
+        padding: 30px;
+      }
+    </style>
 </head>
 
 <body>
@@ -94,7 +99,7 @@ displayHotelImg();*/
                         <div class="card-body">
                             <h4 class="card-title"><a>{{ $hotel->hotel_name }}</a></h4> <!-- 標題 -->
                             <p class="card-text">{{ $hotel->city_name }}</p> <!-- 小標 -->
-                            <a href="{{ $hotel->hotel_link }}" class="btn btn-info">查看更多</a> <!-- 按鈕 -->
+                            <a href="{{ $hotel->hotel_link }}" class="btn btn-info float-right">查看更多</a> <!-- 按鈕 -->
                         </div>
                     </div>
                 </div>

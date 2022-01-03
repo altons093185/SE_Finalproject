@@ -268,3 +268,7 @@ ul.social-list li:nth-child(3) a:hover {
     background-color: DodgerBlue !important; 
     color: #ffffff; 
   }
+
+  .index-hotel-card {
+    width:650px;
+  }
