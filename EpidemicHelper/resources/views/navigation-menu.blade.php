@@ -26,7 +26,7 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('sicks.index') }}" :active="request()->routeIs('sicks.index')">
-                        {{ __('疫情管理') }}
+                        {{ __('防疫等級管理') }}
                     </x-jet-nav-link>
                 </div>
 
